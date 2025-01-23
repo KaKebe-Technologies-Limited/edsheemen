@@ -10,6 +10,8 @@
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon" />
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -32,6 +34,17 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      .carousel-inner {
+        height: 300px; /* Or any desired height */
+      }
+      .carousel-item img {
+        height: 300px; /* Set the height */
+        object-fit: cover; /* Ensures the image fills the space without distortion */
+        width: 100%; /* Ensures the image spans the width of the carousel */
+      }
+    </style>
   </head>
 
   <body>
@@ -97,16 +110,105 @@
       <div class="container">
         <div class="text-center pb-2">
           <p class="section-title px-5">
+            <span class="px-2">ACE's Approach to education</span>
+          </p>
+          <h1 class="mb-4">What our students Learn</h1>
+        </div>
+        <div class="col">
+          <div class="container mt-5">
+            <!-- Carousel -->
+            <div id="schoolCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+              <!-- Indicators -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#schoolCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#schoolCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#schoolCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+        
+              <!-- Carousel Items -->
+              <div class="carousel-inner">
+                <!-- First Slide -->
+                <div class="carousel-item active">
+                  <img src="img/class/IMG_8429.JPG" class="d-block w-100" alt="School Event 1">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Welcome to Our School</h5>
+                    <p>Empowering students to achieve excellence.</p>
+                  </div>
+                </div>
+                <!-- Second Slide -->
+                <div class="carousel-item">
+                  <img src="img/class/IMG_8484.JPG" class="d-block w-100" alt="School Event 2">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Annual Sports Day</h5>
+                    <p>Celebrating teamwork and perseverance.</p>
+                  </div>
+                </div>
+                <!-- Third Slide -->
+                <div class="carousel-item">
+                  <img src="img/class/IMG_8483.JPG" class="d-block w-100" alt="School Event 3">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Science Fair</h5>
+                    <p>Fostering innovation and creativity among students.</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Carousel Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#schoolCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#schoolCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-12 mt-5 mb-5">
+            <div class="row card-items">
+               <div class="col-lg-6 col-sm-6">
+                  <div class="card">
+                     <div class="card-body">
+                        <!-- <i class="bi bi-laptop"></i> -->
+                        <p class="card-text">ACE's approach to education is completely different from other curricula because it is Bible based and proves that indeed the "fear of the LORD is the beginning of wisdom". Its key pillars are; Goal setting, Individualized and Mastery-based, Biblical Values,Diagnostic Testing, Character Building,Academic Excellence, Critical Thinking Skills and Academic Prescription approach to learning. It provides a holistic education that touches spirit, souls and body.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-sm-6">
+                  <div class="card">
+                     <div class="card-body">
+                        <!-- <i class="bi bi-droplet-half"></i> -->
+                        <!-- <h5 class="card-title">UX/UI Design</h5> -->
+                        <p class="card-text">ACE avoids the exam-based and teacher centered models of education which does't take care of the individual learning needs and gifting of each student, character development, personal responsibility and mastery of knowledge as opposed to cramming. ACE provides a pathway to university education globally. As of 2022, "Graduates from the ACE program are attending more than 1,400 colleges and universities globally with outstanding performance".</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="text-center pb-2">
+          <p class="section-title px-5">
             <span class="px-2">Popular Classes</span>
           </p>
-          <h1 class="mb-4">Classes for Your Kids</h1>
+          <h1 class="mb-4">After school activities</h1>
+          <div class="col-lg-12 col-sm-12 mb-5">
+            <div class="card">
+               <div class="card-body">
+                  <!-- <i class="bi bi-envelope-open"></i> -->
+
+                  <p class="card-text">After School Activities will be available at a fee. Activities include; board games/puzzles, football, bible study, book club/library visit, poetry, music, dance, story-telling, cookery and arts & crafts. Future activities may include swimming, golf, photography, filmmaking, computer lessons, and robotics. Regional and International Conventions: Students have the opportunity to participate, compete and perfect their talents in Regional Student Conventions(RSC) and at International Student Conventions(ISC). Parents pay directly for these events as well.</p>
+               </div>
+            </div>
+         </div>
         </div>
         <div class="row">
           <div class="col-lg-4 mb-5">
             <div class="card border-0 bg-light shadow-sm pb-2">
-              <img class="card-img-top mb-2" src="img/images/3.jpg" alt="" />
+              <img class="card-img-top mb-2" src="img/class/9.jpg" alt="" />
               <div class="card-body text-center">
-                <h4 class="card-title">Drawing Class</h4>
+                <h4 class="card-title">Story telling</h4>
                 <p class="card-text">
                   Justo ea diam stet diam ipsum no sit, ipsum vero et et diam
                   ipsum duo et no et, ipsum ipsum erat duo amet clita duo
@@ -135,7 +237,7 @@
                   <div class="col-6 py-1 text-right border-right">
                     <strong>Tution Fee</strong>
                   </div>
-                  <div class="col-6 py-1">$290 / Month</div>
+                  <div class="col-6 py-1">Shs...</div>
                 </div>
               </div>
               <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
@@ -143,9 +245,9 @@
           </div>
           <div class="col-lg-4 mb-5">
             <div class="card border-0 bg-light shadow-sm pb-2">
-              <img class="card-img-top mb-2" src="img/images/5.jpg" alt="" />
+              <img class="card-img-top mb-2" src="img/class/IMG_8429.JPG" alt="" />
               <div class="card-body text-center">
-                <h4 class="card-title">Language Learning</h4>
+                <h4 class="card-title">Art and crafts</h4>
                 <p class="card-text">
                   Justo ea diam stet diam ipsum no sit, ipsum vero et et diam
                   ipsum duo et no et, ipsum ipsum erat duo amet clita duo
@@ -174,7 +276,7 @@
                   <div class="col-6 py-1 text-right border-right">
                     <strong>Tution Fee</strong>
                   </div>
-                  <div class="col-6 py-1">$290 / Month</div>
+                  <div class="col-6 py-1">Shs...</div>
                 </div>
               </div>
               <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
@@ -182,9 +284,9 @@
           </div>
           <div class="col-lg-4 mb-5">
             <div class="card border-0 bg-light shadow-sm pb-2">
-              <img class="card-img-top mb-2" src="img/images/6.jpg" alt="" />
+              <img class="card-img-top mb-2" src="img/class/24.jpg" alt="" />
               <div class="card-body text-center">
-                <h4 class="card-title">Basic Science</h4>
+                <h4 class="card-title">Computer lessons</h4>
                 <p class="card-text">
                   Justo ea diam stet diam ipsum no sit, ipsum vero et et diam
                   ipsum duo et no et, ipsum ipsum erat duo amet clita duo
@@ -213,7 +315,7 @@
                   <div class="col-6 py-1 text-right border-right">
                     <strong>Tution Fee</strong>
                   </div>
-                  <div class="col-6 py-1">$290 / Month</div>
+                  <div class="col-6 py-1">Shs...</div>
                 </div>
               </div>
               <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
@@ -452,6 +554,7 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
