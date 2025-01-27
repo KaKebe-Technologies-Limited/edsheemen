@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ed Shemen</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="..." name="keywords" />
+    <meta content="..." name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      .isotope-card {
+        position: relative;
+        margin-bottom: 30px;
+        height: 300px; /* Set fixed height */
+        overflow: hidden;
+      }
+
+      .isotope-card a {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+
+      .isotope-card img {
+        width: 100%;
+        height: 100%; /* Make image fill entire container */
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .isotope-card:hover img {
+        transform: scale(1.1);
+      }
+
+      .isotope-card .contents {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(77, 76, 76, 0.7);
+        opacity: 0;
+        transition: 0.3s all ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .isotope-card:hover .contents {
+        opacity: 1;
+      }
+
+      .isotope-card .cat {
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      /* Add this to ensure proper grid layout */
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+
+  <body>
+     <!-- Navbar Start -->
+     <div class="container-fluid bg-light position-relative shadow">
+      <nav
+        class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5"
+      >
+        <a
+          href=""
+          class="navbar-brand font-weight-bold text-secondary"
+          style="font-size: 50px"
+        >
+          <i class="flaticon-043-teddy-bear"></i>
+          <span class="text-primary">Es Shemen</span>
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarCollapse"
+        >
+          <div class="navbar-nav font-weight-bold mx-auto py-0">
+            <a href="index.html" class="nav-item nav-link ">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="class.html" class="nav-item nav-link">Learning</a>
+            <a href="team.html" class="nav-item nav-link">Teachers</a>
+            <a href="gallery.html" class="nav-item nav-link active">Gallery</a>
+            <a href="blog.html" class="nav-item nav-link">Blog</a>
+           
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+          <a href="" class="btn btn-primary px-4">Join Class</a>
+        </div>
+      </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary mb-5">
+      <div
+        class="d-flex flex-column align-items-center justify-content-center"
+        style="min-height: 400px"
+      >
+        <h3 class="display-3 font-weight-bold text-white">Gallery</h3>
+        <div class="d-inline-flex text-white">
+          <p class="m-0"><a class="text-white" href="">Home</a></p>
+          <p class="m-0 px-2">/</p>
+          <p class="m-0">Gallery</p>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Gallery Start -->
+    <div class="container-fluid pt-5 pb-3">
+      <div class="container">
+        <div class="text-center pb-2">
+          <p class="section-title px-5">
+            <span class="px-2">Our Gallery</span>
+          </p>
+          <h1 class="mb-4">Our Kids School Gallery</h1>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center mb-2">
+            <ul class="list-inline mb-4" id="portfolio-flters">
+              <li class="btn btn-outline-primary m-1 active" data-filter="*">
+                All
+              </li>
+              <li class="btn btn-outline-primary m-1" data-filter=".packaging">
+                Book Delivery
+              </li>
+              <li class="btn btn-outline-primary m-1" data-filter=".fun">
+                Fun Day
+              </li>
+              <li class="btn btn-outline-primary m-1" data-filter=".library">
+                Library Time
+              </li>
+              <li class="btn btn-outline-primary m-1" data-filter=".orientation">
+                Parents' Orientation
+              </li>
+              <li class="btn btn-outline-primary m-1" data-filter=".staff">
+                Staff Retreat
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="filters-content mb-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="row grid">
+            <div class="isotope-card col-sm-4 all packaging">
+            <a href="img/Books delivery/20230216_121903.jpg" data-fancybox="gal">
+              <img src="img/Books delivery/20230216_121903.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Books Delivery</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all library">
+            <a href="img/pics/13.jpg" data-fancybox="gal">
+              <img src="img/pics/13.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Library Time</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all library">
+            <a href="img/pics/15.jpg" data-fancybox="gal">
+              <img src="img/pics/15.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Library Time</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all library">
+            <a href="img/pics/14.jpg" data-fancybox="gal">
+              <img src="img/pics/14.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Library Time</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all library">
+            <a href="img/pics/18.JPG" data-fancybox="gal">
+              <img src="img/pics/18.JPG" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Library Time</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all library">
+            <a href="img/pics/7.jpg" data-fancybox="gal">
+              <img src="img/pics/7.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Library Time</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all library">
+            <a href="img/pics/11.jpg" data-fancybox="gal">
+              <img src="img/pics/11.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Library Time</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all library">
+            <a href="img/LIBRARY TIME/IMG_8429.JPG" data-fancybox="gal">
+              <img src="img/LIBRARY TIME/IMG_8429.JPG" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Library Time</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all library">
+            <a href="img/LIBRARY TIME/IMG_8483.JPG" data-fancybox="gal">
+              <img src="img/LIBRARY TIME/IMG_8483.JPG" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Library Time</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all library">
+            <a href="img/LIBRARY TIME/IMG_8484.JPG" data-fancybox="gal">
+              <img src="img/LIBRARY TIME/IMG_8484.JPG" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Library Time</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all orientation">
+            <a href="img/PARENT'S ORIENTATION 2023/IMG_8227.JPG" data-fancybox="gal">
+              <img src="img/PARENT'S ORIENTATION 2023/IMG_8227.JPG" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">PARENT'S ORIENTATION 2023</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all orientation">
+            <a href="img/PARENT'S ORIENTATION 2023/IMG_8246.JPG" data-fancybox="gal">
+              <img src="img/PARENT'S ORIENTATION 2023/IMG_8246.JPG" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">PARENT'S ORIENTATION 2023</div>
+              </div>
+            </a>
+            </div>
+           
+            <div class="isotope-card col-sm-4 all orientation">
+            <a href="img/PARENT'S ORIENTATION 2023/IMG_8295.JPG" data-fancybox="gal">
+              <img src="img/PARENT'S ORIENTATION 2023/IMG_8295.JPG" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">PARENT'S ORIENTATION 2023</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all orientation">
+            <a href="img/PARENT'S ORIENTATION 2023/IMG_8377.JPG" data-fancybox="gal">
+              <img src="img/PARENT'S ORIENTATION 2023/IMG_8377.JPG" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">PARENT'S ORIENTATION 2023</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all orientation">
+            <a href="img/PARENT'S ORIENTATION 2023/IMG_8381.JPG" data-fancybox="gal">
+              <img src="img/PARENT'S ORIENTATION 2023/IMG_8381.JPG" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">PARENT'S ORIENTATION 2023</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all orientation">
+            <a href="img/PARENT'S ORIENTATION 2023/IMG_8644.JPG" data-fancybox="gal">
+              <img src="img/PARENT'S ORIENTATION 2023/IMG_8644.JPG" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">PARENT'S ORIENTATION 2023</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all orientation">
+            <a href="img/PARENT'S ORIENTATION 2023/IMG_8625.JPG" data-fancybox="gal">
+              <img src="img/PARENT'S ORIENTATION 2023/IMG_8625.JPG" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">PARENT'S ORIENTATION 2023</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all orientation">
+            <a href="img/PARENT'S ORIENTATION 2023/IMG_8580.JPG" data-fancybox="gal">
+              <img src="img/PARENT'S ORIENTATION 2023/IMG_8580.JPG" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">PARENT'S ORIENTATION 2023</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all packaging">
+            <a href="img/Books delivery/20230216_122841.jpg" data-fancybox="gal">
+              <img src="img/Books delivery/20230216_122841.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Books Delivery</div>
+              </div>
+            </a>
+            </div>
+      
+            <div class="isotope-card col-sm-4 all fun">
+            <a href="img/Fun day Term 1 2023/1.jpg" data-fancybox="gal">
+              <img src="img/Fun day Term 1 2023/1.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Fun day Term 1 2023</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all packaging">
+            <a href="img/Books delivery/20230216_121758.jpg" data-fancybox="gal">
+              <img src="img/Books delivery/20230216_121758.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Books Delivery</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all staff">
+            <a href="img/Staff Retreat Term 1 2023/20230524_164859.jpg" data-fancybox="gal">
+              <img src="img/Staff Retreat Term 1 2023/20230524_164859.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Staff Retreat Term 1 2023</div>
+              </div>
+            </a>
+      
+            </div>                            
+            <div class="isotope-card col-sm-4 all fun">
+            <a href="img/Fun day Term 1 2023/2.jpg" data-fancybox="gal">
+              <img src="img/Fun day Term 1 2023/2.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Fun day Term 1 2023</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all packaging">
+            <a href="img/Books delivery/20230216_120735.jpg" data-fancybox="gal">
+              <img src="img/Books delivery/20230216_120735.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Books Delivery</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all staff">
+            <a href="img/Staff Retreat Term 1 2023/20230524_150138.jpg" data-fancybox="gal">
+              <img src="img/Staff Retreat Term 1 2023/20230524_150138.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Staff Retreat Term 1 2023</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all fun">
+            <a href="img/Fun day Term 1 2023/13.jpg" data-fancybox="gal">
+              <img src="img/Fun day Term 1 2023/13.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Fun day Term 1 2023</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all fun">
+            <a href="img/Fun day Term 1 2023/12.jpg" data-fancybox="gal">
+              <img src="img/Fun day Term 1 2023/12.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Fun day Term 1 2023</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all fun">
+            <a href="img/Fun day Term 1 2023/11.jpg" data-fancybox="gal">
+              <img src="img/Fun day Term 1 2023/11.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Fun day Term 1 2023</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all packaging">
+            <a href="img/Books delivery/20230216_121613.jpg" data-fancybox="gal">
+              <img src="img/Books delivery/20230216_121613.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Books Delivery</div>
+              </div>
+            </a>
+            </div>
+            <div class="isotope-card col-sm-4 all staff">
+            <a href="img/Staff Retreat Term 1 2023/20230524_121625.jpg" data-fancybox="gal">
+              <img src="img/Staff Retreat Term 1 2023/20230524_121625.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Staff Retreat Term 1 2023</div>
+              </div>
+            </a>
+      
+            </div>
+            <div class="isotope-card col-sm-4 all packaging">
+            <a href="img/Books delivery/20230216_121532.jpg" data-fancybox="gal">
+              <img src="img/Books delivery/20230216_121532.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Books Delivery</div>
+              </div>
+            </a>
+      
+            </div>
+            <div class="isotope-card col-sm-4 all staff">
+            <a href="img/Staff Retreat Term 1 2023/20230524_121319.jpg"" data-fancybox="gal">
+              <img src="img/Staff Retreat Term 1 2023/20230524_121319.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Staff Retreat Term 1 2023</div>
+              </div>
+            </a>
+      
+            </div>
+            <div class="isotope-card col-sm-4 all packaging">
+            <a href="img/Books delivery/20230216_123056.jpg" data-fancybox="gal">
+              <img src="img/Books delivery/20230216_123056.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Books Delivery</div>
+              </div>
+            </a>
+      
+            </div>
+            <div class="isotope-card col-sm-4 all packaging">
+            <a href="img/Books delivery/20230216_123406.jpg" data-fancybox="gal">
+              <img src="img/Books delivery/20230216_123406.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Books Delivery</div>
+              </div>
+            </a>
+      
+            </div>
+            <div class="isotope-card col-sm-4 all staff">
+            <a href="img/Staff Retreat Term 1 2023/20230524_120923.jpg" data-fancybox="gal">
+              <img src="img/Staff Retreat Term 1 2023/20230524_120923.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Staff Retreat Term 1 2023</div>
+              </div>
+            </a>
+      
+            </div>
+            <div class="isotope-card col-sm-4 all staff">
+            <a href="img/Staff Retreat Term 1 2023/20230524_094011.jpg" data-fancybox="gal">
+              <img src="img/Staff Retreat Term 1 2023/20230524_094011.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Staff Retreat Term 1 2023</div>
+              </div>
+            </a>
+      
+            </div>
+            <div class="isotope-card col-sm-4 all fun">
+            <a href="img/Fun day Term 1 2023/10.jpg" data-fancybox="gal">
+              <img src="img/Fun day Term 1 2023/10.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">un day Term 1 2023</div>
+              </div>
+            </a>
+      
+            </div>
+            <div class="isotope-card col-sm-4 all fun">
+            <a href="img/Fun day Term 1 2023/9.jpg" data-fancybox="gal">
+              <img src="img/Fun day Term 1 2023/9.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Fun day Term 1 2023</div>
+              </div>
+            </a>
+      
+            </div>
+            <div class="isotope-card col-sm-4 all fun">
+            <a href="img/Fun day Term 1 2023/8.jpg" data-fancybox="gal">
+              <img src="img/Fun day Term 1 2023/8.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Fun day Term 1 2023</div>
+              </div>
+            </a>
+      
+            </div>
+            <div class="isotope-card col-sm-4 all packaging">
+            <a href="img/Books delivery/20230216_121321.jpg" data-fancybox="gal">
+              <img src="img/Books delivery/20230216_121321.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Books Delivery</div>
+              </div>
+            </a>
+      
+            </div>
+            <div class="isotope-card col-sm-4 all packaging">
+            <a href="img/Books delivery/20230216_121159.jpg" data-fancybox="gal">
+              <img src="img/Books delivery/20230216_121159.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Books Delivery</div>
+              </div>
+            </a>
+      
+            </div>
+            <div class="isotope-card col-sm-4 all packaging">
+            <a href="img/Books delivery/20230216_120954.jpg" data-fancybox="gal">
+              <img src="img/Books delivery/20230216_120954.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Books Delivery</div>
+              </div>
+            </a>
+      
+            </div>
+      
+            <div class="isotope-card col-sm-4 all fun">
+            <a href="img/Fun day Term 1 2023/7.jpg" data-fancybox="gal">
+              <img src="img/Fun day Term 1 2023/7.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Fun day Term 1 2023</div>
+              </div>
+            </a>
+      
+            </div>
+      
+            <div class="isotope-card col-sm-4 all fun">
+            <a href="img/Fun day Term 1 2023/6.jpg" data-fancybox="gal">
+              <img src="img/Fun day Term 1 2023/6.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Fun day Term 1 2023</div>
+              </div>
+            </a>
+      
+            </div>
+      
+            <div class="isotope-card col-sm-4 all fun">
+            <a href="img/Fun day Term 1 2023/5.jpg" data-fancybox="gal">
+              <img src="img/Fun day Term 1 2023/5.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Fun day Term 1 2023</div>
+              </div>
+            </a>
+      
+            </div>
+      
+            <div class="isotope-card col-sm-4 all fun">
+            <a href="img/Fun day Term 1 2023/4.jpg" data-fancybox="gal">
+              <img src="img/Fun day Term 1 2023/4.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Fun day Term 1 2023</div>
+              </div>
+            </a>
+      
+            </div>
+      
+            <div class="isotope-card col-sm-4 all fun">
+            <a href="img/Fun day Term 1 2023/3.jpg" data-fancybox="gal">
+              <img src="img/Fun day Term 1 2023/3.jpg" alt="Image" class="img-fluid">
+              <div class="contents">
+              <div class="cat">Fun day Term 1 2023</div>
+              </div>
+            </a>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Gallery End -->
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+    <div class="row pt-5">
+      <div class="col-lg-3 col-md-6 mb-5">
+        <a
+          href="#"
+          class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
+          style="font-size: 40px; line-height: 40px"
+        >
+          <i class="flaticon-043-teddy-bear"></i>
+          <span class="text-white">Es Shemen</span>
+        </a>
+        <p>
+          Es Shemen is dedicated to providing quality education that empowers students with the knowledge, skills, and character needed to excel in a global society, all within a nurturing and supportive environment.
+        </p>
+        <div class="d-flex justify-content-start mt-4">
+          <a
+            class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+            style="width: 38px; height: 38px"
+            href="#"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+            style="width: 38px; height: 38px"
+            href="#"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+            style="width: 38px; height: 38px"
+            href="#"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+            style="width: 38px; height: 38px"
+            href="#"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h3 class="text-primary mb-4">Get In Touch</h3>
+        <div class="d-flex">
+          <h4 class="fa fa-map-marker-alt text-primary"></h4>
+          <div class="pl-3">
+            <h5 class="text-white">Address</h5>
+            <p>Dokolo Road, Senior Quarters, Lira City, Uganda</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <h4 class="fa fa-envelope text-primary"></h4>
+          <div class="pl-3">
+            <h5 class="text-white">Email</h5>
+            <p>contact@esshemen.ug</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <h4 class="fa fa-phone-alt text-primary"></h4>
+          <div class="pl-3">
+            <h5 class="text-white">Phone</h5>
+            <p>+256 782 345 678</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h3 class="text-primary mb-4">Quick Links</h3>
+        <div class="d-flex flex-column justify-content-start">
+          <a class="text-white mb-2" href="#"
+            ><i class="fa fa-angle-right mr-2"></i>Home</a
+          >
+          <a class="text-white mb-2" href="#"
+            ><i class="fa fa-angle-right mr-2"></i>About Us</a
+          >
+          <a class="text-white mb-2" href="#"
+            ><i class="fa fa-angle-right mr-2"></i>Programs</a
+          >
+          <a class="text-white mb-2" href="#"
+            ><i class="fa fa-angle-right mr-2"></i>Admissions</a
+          >
+          <a class="text-white mb-2" href="#"
+            ><i class="fa fa-angle-right mr-2"></i>Blog</a
+          >
+          <a class="text-white" href="#"
+            ><i class="fa fa-angle-right mr-2"></i>Contact Us</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h3 class="text-primary mb-4">Newsletter</h3>
+        <form action="#">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control border-0 py-4"
+              placeholder="Your Name"
+              required="required"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control border-0 py-4"
+              placeholder="Your Email"
+              required="required"
+            />
+          </div>
+          <div>
+            <button
+              class="btn btn-primary btn-block border-0 py-3"
+              type="submit"
+            >
+              Subscribe
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div
+      class="container-fluid pt-5"
+      style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;"
+    >
+      <p class="m-0 text-center text-white">
+        &copy;
+        <a class="text-primary font-weight-bold" href="#">Es Shemen</a>.
+        All Rights Reserved.
+        <br />
+        Designed and Developed by
+        <a class="text-primary font-weight-bold" href="https://yourdeveloperlink.com"
+          >Your Developer</a
+        >
+      </p>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary p-3 back-to-top"
+      ><i class="fa fa-angle-double-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        // Initialize Isotope
+        var $grid = $('.grid').isotope({
+            itemSelector: '.isotope-card',
+            layoutMode: 'fitRows'
+        });
+
+        // Filter items on button click
+        $('#portfolio-flters').on('click', 'li', function() {
+            var filterValue = $(this).attr('data-filter');
+            
+            // Remove active class from all buttons and add to current
+            $('#portfolio-flters li').removeClass('active');
+            $(this).addClass('active');
+            
+            // Filter the items
+            $grid.isotope({ filter: filterValue });
+        });
+
+        // Layout Isotope after all images have loaded
+        $grid.imagesLoaded().progress(function() {
+            $grid.isotope('layout');
+        });
+    });
+    </script>
+  </body>
+</html>
